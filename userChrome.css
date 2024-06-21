@@ -27,8 +27,6 @@
 |                                                                             |
 \*===========================================================================*/
 
-
-
 /*===================================*\
 |      GET RID OF MEGABAR POPOUT      |
 \*===================================*/
@@ -45,14 +43,12 @@
     --arrowpanel-menuitem-padding:           2px        !important;
 }
 
-
-
 /*=================================*\
 |      MAKE MENUS MORE COMPACT      |
 \*=================================*/
-menupopup>menu, menupopup>menuitem {   padding-block: 2px !important;   }
-
-
+menupopup > menu, menupopup > menuitem {
+    padding-block: 2px !important;
+}
 
 /*======================================*\
 |       MAKE THE MUTE BUTTON BIGGER      |
@@ -64,21 +60,23 @@ menupopup>menu, menupopup>menuitem {   padding-block: 2px !important;   }
     max-height: 20px !important;
 }
 
-
-
 /*=================================================*\
 |      MAKE TABS AND NAVIGATION PANEL NOT SUCK      |
 \*=================================================*/
-.tab-background:not([selected=true]) {
+.tabbrowser-tab:not([selected]) .tab-background {
     border-radius: 3px 3px 0px 0px !important;
     margin-top:     4px !important;
     margin-bottom: -6px !important;
     background-color: color-mix(in srgb, currentColor 17%, transparent);
 }
-.tab-background[selected=true] {
+
+.tabbrowser-tab[selected] .tab-background {
     border-radius: 3px 3px 0px 0px !important;
     margin-top:     2px !important;
     margin-bottom: -2px !important;
     text-shadow: none !important;
-    background-color: color-mix(in srgb, currentColor 100%, transparent);
+    background-color: color-mix(in srgb, currentColor 100%, transparent) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;  /* Add a shadow to highlight the active tab */
+    color: #000000 !important;  /* Change text color to white for contrast */
 }
+
